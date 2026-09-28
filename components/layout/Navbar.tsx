@@ -79,9 +79,9 @@ export function Navbar() {
             <Image
               src="/images/icon-cart.svg"
               alt="Cart"
-              width={22}
-              height={22}
-              className="w-[22px] h-[22px]"
+              width={16}
+              height={20}
+              className="w-4 h-5"
             />
           </button>
 

@@ -2,7 +2,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { PartnerLogos } from "@/components/sections/PartnerLogos";
 import { ExploreCourses } from "@/components/sections/ExploreCourses";
-import { LearningPaths } from "@/components/sections/LearningPaths";
 import { Container, Button } from "@/components/ui";
 
 export default function Home() {
@@ -19,9 +18,6 @@ export default function Home() {
 
       {/* Frame 3 & Tab_Categories: Explore Courses Section */}
       <ExploreCourses />
-
-      {/* Frame 9: Learning Paths Section */}
-      <LearningPaths />
 
       {/* Temporary Test & Verification Section (Easy to replace as sections are added) */}
       <main className="py-16">
@@ -59,3 +55,4 @@ export default function Home() {
     </div>
   );
 }
+

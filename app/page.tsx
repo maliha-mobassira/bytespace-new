@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { PartnerLogos } from "@/components/sections/PartnerLogos";
+import { ExploreCourses } from "@/components/sections/ExploreCourses";
 import { Container, Button } from "@/components/ui";
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
 
       {/* Partner Logos Ribbon */}
       <PartnerLogos />
+
+      {/* Frame 3 & Tab_Categories: Explore Courses Section */}
+      <ExploreCourses />
 
       {/* Temporary Test & Verification Section (Easy to replace as sections are added) */}
       <main className="py-16">

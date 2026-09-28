@@ -74,7 +74,7 @@ export function Navbar() {
           <button
             type="button"
             aria-label="Shopping Cart"
-            className="w-11 h-11 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 flex items-center justify-center transition-all duration-200 cursor-pointer active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400"
+            className="flex items-center justify-center p-2 text-white hover:opacity-80 transition-all duration-200 cursor-pointer active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400"
           >
             <Image
               src="/images/icon-cart.svg"

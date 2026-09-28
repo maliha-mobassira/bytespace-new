@@ -4,6 +4,7 @@ import { PartnerLogos } from "@/components/sections/PartnerLogos";
 import { ExploreCourses } from "@/components/sections/ExploreCourses";
 import { LearningPaths } from "@/components/sections/LearningPaths";
 import { ProfessionalGrowth } from "@/components/sections/ProfessionalGrowth";
+import { CTASection } from "@/components/sections/CTASection";
 
 export default function Home() {
   return (
@@ -23,8 +24,11 @@ export default function Home() {
       {/* 5. Learning Paths (Frame 9 & Frame 10) */}
       <LearningPaths />
 
-      {/* 6. Professional Growth (Frame 13) */}
+      {/* 6. Professional Growth & Course Features (Frame 13) */}
       <ProfessionalGrowth />
+
+      {/* 7. Call To Action (CTA_Frame) */}
+      <CTASection />
     </div>
   );
 }

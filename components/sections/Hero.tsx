@@ -61,25 +61,6 @@ export function Hero() {
             />
           </div>
 
-          {/* White Squiggle (Mid-Left) */}
-          <div
-            className="absolute"
-            style={{
-              left: "210px",
-              top: "220px",
-              width: "140px",
-              transform: "scaleX(-1)",
-            }}
-          >
-            <Image
-              src="/images/shape-squiggle-white.png"
-              alt=""
-              width={140}
-              height={140}
-              className="w-full h-auto object-contain drop-shadow-xl"
-            />
-          </div>
-
           {/* Lime Cylinder (Top-Right) */}
           <div
             className="absolute"
@@ -152,6 +133,28 @@ export function Hero() {
             width={342}
             height={342}
             className="w-full h-auto object-contain drop-shadow-2xl"
+          />
+        </div>
+
+        {/* 2b. White Squiggle (Exact Figma: width: 175px; left: calc(50% - 175px/2 - 449.5px); top: 46.58%; bottom: 36.33%; transform: matrix(-1, 0, 0, 1, 0, 0);) */}
+        <div
+          aria-hidden="true"
+          className="absolute z-10 pointer-events-none"
+          style={{
+            position: "absolute",
+            width: "175px",
+            height: "175px",
+            left: "calc(50% - 175px/2 - 449.5px)",
+            top: "46.58%",
+            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+          }}
+        >
+          <Image
+            src="/images/shape-squiggle-white.png"
+            alt=""
+            width={175}
+            height={175}
+            className="w-full h-full object-contain drop-shadow-xl"
           />
         </div>
 

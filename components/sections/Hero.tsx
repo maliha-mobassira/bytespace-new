@@ -78,24 +78,6 @@ export function Hero() {
             />
           </div>
 
-          {/* White Torus / Ring (Bottom-Left) */}
-          <div
-            className="absolute"
-            style={{
-              left: "80px",
-              top: "430px",
-              width: "230px",
-            }}
-          >
-            <Image
-              src="/images/shape-ring-white.png"
-              alt=""
-              width={230}
-              height={230}
-              className="w-full h-auto object-contain drop-shadow-xl"
-            />
-          </div>
-
           {/* Lime Cylinder (Top-Right) */}
           <div
             className="absolute"
@@ -151,10 +133,30 @@ export function Hero() {
           </div>
         </div>
 
-        {/* 2. Ellipse 7 (Exact Figma: left: calc(50% - 1149px/2 - 0.5px); top: 582px; border: 320px solid #CBFC01;) */}
+        {/* 2. White Donut / Torus (Exact Figma: width: 342px; left: calc(50% - 342px/2 - 531px); top: 66.6%;) */}
         <div
           aria-hidden="true"
           className="absolute z-10 pointer-events-none"
+          style={{
+            position: "absolute",
+            width: "342px",
+            left: "calc(50% - 342px/2 - 531px)",
+            top: "66.6%",
+          }}
+        >
+          <Image
+            src="/images/shape-ring-white.png"
+            alt=""
+            width={342}
+            height={342}
+            className="w-full h-auto object-contain drop-shadow-2xl"
+          />
+        </div>
+
+        {/* 3. Ellipse 7 (Exact Figma: left: calc(50% - 1149px/2 - 0.5px); top: 582px; border: 320px solid #CBFC01;) */}
+        <div
+          aria-hidden="true"
+          className="absolute z-0 pointer-events-none"
           style={{
             boxSizing: "border-box",
             position: "absolute",
@@ -167,7 +169,7 @@ export function Hero() {
           }}
         />
 
-        {/* 3. Hero Header Content (Exact Figma: width: 1200px; height: 345px; left: calc(50% - 1200px/2); top: 169px;) */}
+        {/* 4. Hero Header Content (Exact Figma: width: 1200px; height: 345px; left: calc(50% - 1200px/2); top: 169px;) */}
         <div
           className="absolute z-30 flex flex-col items-center text-center pointer-events-auto"
           style={{
@@ -196,27 +198,29 @@ export function Hero() {
           </div>
         </div>
 
-        {/* 4. Boy with Laptop (Exact Figma bounds, anchored to bottom, z-20) */}
+        {/* 5. Boy with Laptop (Exact Figma: width: 578px; height: 541px; left: calc(50% - 578px/2); top: 512px;) */}
         <div
           className="absolute z-20 pointer-events-none"
           style={{
-            left: "calc(50% - 250px)",
-            top: "450px",
-            width: "500px",
-            bottom: "0px",
+            position: "absolute",
+            width: "578px",
+            height: "541px",
+            left: "calc(50% - 578px/2)",
+            top: "512px",
+            filter: "drop-shadow(25px 36px 36px rgba(0, 0, 0, 0.12)) drop-shadow(10px 14px 16px rgba(0, 0, 0, 0.08))",
           }}
         >
           <Image
             src="/images/hero-boy.png"
             alt="Student with laptop"
-            width={500}
-            height={574}
+            width={578}
+            height={541}
             priority
-            className="w-full h-full object-contain object-bottom drop-shadow-2xl"
+            className="w-full h-full object-contain"
           />
         </div>
 
-        {/* 5. Card 1: UI/UX Design (Exact Figma: left: 404px; top: 639px; width: 208px; height: 70px;) */}
+        {/* 6. Card 1: UI/UX Design (Exact Figma: left: 404px; top: 639px; width: 208px; height: 70px;) */}
         <div
           className="absolute z-30 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/60 p-4 flex flex-col justify-center items-start gap-1 pointer-events-auto transition-transform duration-200 hover:scale-105"
           style={{
@@ -236,7 +240,7 @@ export function Hero() {
           </p>
         </div>
 
-        {/* 6. Card 2: Learning Progress 55% (Exact Figma: left: 842px; top: 651px; width: 232px; height: 131px;) */}
+        {/* 7. Card 2: Learning Progress 55% (Exact Figma: left: 842px; top: 651px; width: 232px; height: 131px;) */}
         <div
           className="absolute z-30 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/60 p-4 flex flex-col items-start gap-2 pointer-events-auto transition-transform duration-200 hover:scale-105"
           style={{
@@ -263,7 +267,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* 7. Card 3: Happy Students (Exact Figma: left: 328px; top: 837px; width: 258px; height: 121px;) */}
+        {/* 8. Card 3: Happy Students (Exact Figma: left: 328px; top: 837px; width: 258px; height: 121px;) */}
         <div
           className="absolute z-30 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/60 p-4 flex flex-col justify-center items-start gap-2 pointer-events-auto transition-transform duration-200 hover:scale-105"
           style={{

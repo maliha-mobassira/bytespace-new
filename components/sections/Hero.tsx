@@ -3,14 +3,16 @@
 import React from "react";
 import Image from "next/image";
 import { SearchBar } from "@/components/ui/SearchBar";
-import { AvatarStack } from "@/components/ui/AvatarStack";
 
 export function Hero() {
-  const avatars = [
+  const studentAvatars = [
     "/images/avatar-1.jpg",
     "/images/avatar-2.jpg",
     "/images/avatar-3.jpg",
     "/images/avatar-4.jpg",
+    "/images/avatar-5.jpg",
+    "/images/avatar-6.jpg",
+    "/images/avatar-7.jpg",
   ];
 
   return (
@@ -269,20 +271,23 @@ export function Hero() {
 
         {/* 8. Card 3: Happy Students (Exact Figma: left: 328px; top: 837px; width: 258px; height: 121px;) */}
         <div
-          className="absolute z-30 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/60 p-4 flex flex-col justify-center items-start gap-2 pointer-events-auto transition-transform duration-200 hover:scale-105"
+          className="absolute z-30 bg-white backdrop-blur-[10px] rounded-[16px] shadow-xl border border-white/60 flex flex-col justify-center items-start gap-[8px] pointer-events-auto transition-transform duration-200 hover:scale-105"
           style={{
             position: "absolute",
             width: "258px",
             height: "121px",
             left: "328px",
             top: "837px",
-            borderRadius: "16px",
             padding: "16px",
+            borderRadius: "16px",
+            boxSizing: "border-box",
           }}
         >
-          {/* Top Row: Happy Students and Star Rating */}
-          <div className="flex items-center justify-between w-full">
+          {/* Top Auto Layout Vertical */}
+          <div className="flex flex-col items-start gap-[2px] flex-none">
+            {/* Happy Students (Label M: Satoshi 500, 16px, 120%, #242528) */}
             <span
+              className="whitespace-nowrap"
               style={{
                 fontFamily: "var(--font-body)",
                 fontWeight: 500,
@@ -293,27 +298,69 @@ export function Hero() {
             >
               Happy Students
             </span>
-            <div className="flex items-center gap-1.5">
-              <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.10588 0.344297C6.25624 -0.11492 6.90587 -0.114919 7.05623 0.344298L8.27423 4.06417C8.34137 4.26924 8.53249 4.4081 8.74827 4.40859L12.6625 4.41747C13.1457 4.41856 13.3464 5.0364 12.9561 5.32131L9.79471 7.6292C9.62043 7.75642 9.54743 7.9811 9.61364 8.18646L10.8148 11.9118C10.963 12.3717 10.4375 12.7536 10.0459 12.4704L6.87403 10.1769C6.69917 10.0505 6.46294 10.0505 6.28808 10.1769L3.11621 12.4704C2.72464 12.7536 2.19908 12.3717 2.34736 11.9118L3.54847 8.18646C3.61468 7.9811 3.54168 7.75642 3.3674 7.62919L0.205968 5.3213C-0.18431 5.0364 0.016438 4.41856 0.499644 4.41747L4.41384 4.40859C4.62961 4.4081 4.82074 4.26924 4.88788 4.06417L6.10588 0.344297Z" fill="#D4FB20"/>
-              </svg>
+
+            {/* Horizontal Row: 4.5 (240) + Star */}
+            <div className="flex flex-row items-center gap-1.5 whitespace-nowrap">
               <span
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontWeight: 500,
-                  fontSize: "14px",
-                  lineHeight: "120%",
+                  fontWeight: 400,
+                  fontSize: "12px",
+                  lineHeight: "160%",
                   color: "#242528",
                 }}
               >
                 4.5 (240)
               </span>
+              <svg width="14" height="13" viewBox="66 37 14 13" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+                <path
+                  d="M72.5248 37.9512C72.6752 37.492 73.3248 37.492 73.4752 37.9512L74.6932 41.6711C74.7603 41.8762 74.9514 42.015 75.1672 42.0155L79.0814 42.0244C79.5646 42.0255 79.7654 42.6433 79.3751 42.9282L76.2137 45.2361C76.0394 45.3634 75.9664 45.588 76.0326 45.7934L77.2337 49.5188C77.382 49.9787 76.8564 50.3605 76.4648 50.0774L73.293 47.7838C73.1181 47.6574 72.8819 47.6574 72.707 47.7838L69.5352 50.0774C69.1436 50.3605 68.618 49.9787 68.7663 49.5188L69.9674 45.7934C70.0336 45.588 69.9606 45.3634 69.7863 45.2361L66.6249 42.9282C66.2346 42.6433 66.4354 42.0255 66.9186 42.0244L70.8328 42.0155C71.0486 42.015 71.2397 41.8762 71.3068 41.6711L72.5248 37.9512Z"
+                  fill="#D4FB20"
+                />
+              </svg>
             </div>
           </div>
 
-          {/* Bottom Row: Avatars layout (232px x 43px) */}
-          <div className="w-[232px] h-[43px] flex items-center mt-1">
-            <AvatarStack avatars={avatars} count="2K+" size="md" />
+          {/* Bottom Auto Layout Horizontal: 7 Avatars + 1 Lime Circle "2K+" (width: 232px; height: 43px;) */}
+          <div className="flex flex-row items-center w-[232px] h-[43px] flex-none">
+            {studentAvatars.map((src, idx) => (
+              <div
+                key={idx}
+                className="relative w-[43px] h-[43px] rounded-full overflow-hidden shrink-0 border border-white/40 shadow-sm"
+                style={{
+                  marginRight: "-16px",
+                  zIndex: idx,
+                }}
+              >
+                <Image
+                  src={src}
+                  alt={`Student ${idx + 1}`}
+                  width={43}
+                  height={43}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+            {/* 8th Circle: 2K+ Badge (Exact Figma: width: 43px; height: 43px; background: #D4FB20; color: #242528;) */}
+            <div
+              className="relative w-[43px] h-[43px] rounded-full shrink-0 flex items-center justify-center border border-white/40 shadow-sm"
+              style={{
+                backgroundColor: "#D4FB20",
+                zIndex: 7,
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontWeight: 700,
+                  fontSize: "12px",
+                  lineHeight: "150%",
+                  color: "#242528",
+                }}
+              >
+                2K+
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -353,16 +400,77 @@ export function Hero() {
           />
 
           {/* Mobile White Card */}
-          <div className="w-full bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/60 -mt-6 z-20">
-            <div className="flex items-center justify-between mb-2">
-              <p className="text-neutral-950 font-semibold text-[13px]">
+          <div className="w-full bg-white backdrop-blur-[10px] rounded-2xl p-4 shadow-xl border border-white/60 -mt-6 z-20 flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start">
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontWeight: 500,
+                  fontSize: "15px",
+                  lineHeight: "120%",
+                  color: "#242528",
+                }}
+              >
                 Happy Students
               </p>
-              <span className="text-[11px] font-semibold text-neutral-900">
-                ★ 4.5 (240)
-              </span>
+              <div className="flex items-center gap-1 mt-0.5">
+                <span
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontWeight: 400,
+                    fontSize: "12px",
+                    lineHeight: "160%",
+                    color: "#242528",
+                  }}
+                >
+                  4.5 (240)
+                </span>
+                <svg width="14" height="13" viewBox="66 37 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M72.5248 37.9512C72.6752 37.492 73.3248 37.492 73.4752 37.9512L74.6932 41.6711C74.7603 41.8762 75.9624 42.015 75.1672 42.0155L79.0814 42.0244C79.5646 42.0255 79.7654 42.6433 79.3751 42.9282L76.2137 45.2361C76.0394 45.3634 75.9664 45.588 76.0326 45.7934L77.2337 49.5188C77.382 49.9787 76.8564 50.3605 76.4648 50.0774L73.293 47.7838C73.1181 47.6574 72.8819 47.6574 72.707 47.7838L69.5352 50.0774C69.1436 50.3605 68.618 49.9787 68.7663 49.5188L69.9674 45.7934C70.0336 45.588 69.9606 45.3634 69.7863 45.2361L66.6249 42.9282C66.2346 42.6433 66.4354 42.0255 66.9186 42.0244L70.8328 42.0155C71.0486 42.015 71.2397 41.8762 71.3068 41.6711L72.5248 37.9512Z"
+                    fill="#D4FB20"
+                  />
+                </svg>
+              </div>
             </div>
-            <AvatarStack avatars={avatars} count="2K+" size="sm" />
+            <div className="flex flex-row items-center overflow-x-auto py-1 w-full">
+              {studentAvatars.map((src, idx) => (
+                <div
+                  key={idx}
+                  className="relative w-[36px] h-[36px] rounded-full overflow-hidden shrink-0 border border-white/40 shadow-sm"
+                  style={{
+                    marginRight: "-12px",
+                    zIndex: idx,
+                  }}
+                >
+                  <Image
+                    src={src}
+                    alt={`Student ${idx + 1}`}
+                    width={36}
+                    height={36}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+              <div
+                className="relative w-[36px] h-[36px] rounded-full shrink-0 flex items-center justify-center border border-white/40 shadow-sm"
+                style={{
+                  backgroundColor: "#D4FB20",
+                  zIndex: 7,
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontWeight: 700,
+                    fontSize: "11px",
+                    color: "#242528",
+                  }}
+                >
+                  2K+
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

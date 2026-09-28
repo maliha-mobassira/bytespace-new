@@ -8,41 +8,22 @@ export function CTASection() {
     <section
       id="join-as-creator"
       aria-label="Call to Action: Join as Creator"
-      className="relative w-full h-[488px] overflow-hidden flex items-center justify-center"
-      style={{
-        backgroundColor: "#003BE2",
-        backgroundImage: `
-          linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
-        `,
-        backgroundSize: "72px 72px",
-      }}
+      className="relative w-full h-[488px] overflow-hidden flex items-center justify-center bg-[#003BE2]"
     >
       {/* ========================================================================= */}
-      {/* 3D Floating Ornaments on Left and Right (Exact Figma Perimeter Clusters)   */}
+      {/* 3D Floating Ornaments Canvas (Exact Figma Background & 3D Elements)       */}
       {/* ========================================================================= */}
-      {/* Left Ornaments Cluster */}
-      <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[220px] lg:w-[250px] pointer-events-none select-none z-0">
-        <Image
-          src="/images/cta-ornaments-left.png"
-          alt=""
-          fill
-          priority
-          sizes="(max-width: 1024px) 220px, 250px"
-          className="object-cover object-left"
-        />
-      </div>
-
-      {/* Right Ornaments Cluster */}
-      <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[220px] lg:w-[250px] pointer-events-none select-none z-0">
-        <Image
-          src="/images/cta-ornaments-right.png"
-          alt=""
-          fill
-          priority
-          sizes="(max-width: 1024px) 220px, 250px"
-          className="object-cover object-right"
-        />
+      <div className="absolute inset-0 flex justify-center pointer-events-none select-none z-0">
+        <div className="relative w-full max-w-[1440px] h-[488px] shrink-0">
+          <Image
+            src="/images/cta-bg-perfect.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="(max-width: 1440px) 100vw, 1440px"
+          />
+        </div>
       </div>
 
       {/* ========================================================================= */}
@@ -90,3 +71,5 @@ export function CTASection() {
 }
 
 export default CTASection;
+
+

@@ -63,17 +63,17 @@ export function Hero() {
           <div
             className="absolute"
             style={{
-              left: "170px",
-              top: "210px",
-              width: "165px",
+              left: "210px",
+              top: "220px",
+              width: "140px",
               transform: "scaleX(-1)",
             }}
           >
             <Image
               src="/images/shape-squiggle-white.png"
               alt=""
-              width={165}
-              height={165}
+              width={140}
+              height={140}
               className="w-full h-auto object-contain drop-shadow-xl"
             />
           </div>
@@ -82,16 +82,16 @@ export function Hero() {
           <div
             className="absolute"
             style={{
-              left: "90px",
+              left: "80px",
               top: "430px",
-              width: "210px",
+              width: "230px",
             }}
           >
             <Image
               src="/images/shape-ring-white.png"
               alt=""
-              width={210}
-              height={210}
+              width={230}
+              height={230}
               className="w-full h-auto object-contain drop-shadow-xl"
             />
           </div>
@@ -119,7 +119,7 @@ export function Hero() {
             className="absolute"
             style={{
               right: "190px",
-              top: "200px",
+              top: "190px",
               width: "180px",
             }}
           >
@@ -154,7 +154,7 @@ export function Hero() {
         {/* 2. Ellipse 7 (Exact Figma: left: calc(50% - 1149px/2 - 0.5px); top: 582px; border: 320px solid #CBFC01;) */}
         <div
           aria-hidden="true"
-          className="absolute z-0 pointer-events-none"
+          className="absolute z-10 pointer-events-none"
           style={{
             boxSizing: "border-box",
             position: "absolute",
@@ -176,18 +176,18 @@ export function Hero() {
             top: "169px",
           }}
         >
-          {/* Main Heading */}
-          <h1 className="text-white text-[72px] font-semibold tracking-[-0.01em] leading-[1.18] max-w-[940px]">
-            Get Access to Hundreds Courses Available
+          {/* Main Heading (exact 2 lines matching Figma) */}
+          <h1 className="text-white text-[72px] font-semibold tracking-[-0.01em] leading-[1.18] max-w-[880px]">
+            Get Access to Hundreds <br /> Courses Available
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-5 text-white/80 text-[18px] max-w-[620px] leading-relaxed">
+          <p className="mt-4 text-white/80 text-[18px] max-w-[640px] leading-relaxed">
             Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
           </p>
 
           {/* Search Bar */}
-          <div className="mt-9 flex justify-center w-full">
+          <div className="mt-8 flex justify-center w-full">
             <SearchBar
               placeholder="Course, topic, creator"
               buttonLabel="Search"
@@ -196,22 +196,23 @@ export function Hero() {
           </div>
         </div>
 
-        {/* 4. Boy with Laptop (Centered, anchored to bottom border) */}
+        {/* 4. Boy with Laptop (Exact Figma bounds, anchored to bottom, z-20) */}
         <div
           className="absolute z-20 pointer-events-none"
           style={{
-            left: "calc(50% - 255px)",
+            left: "calc(50% - 250px)",
+            top: "450px",
+            width: "500px",
             bottom: "0px",
-            width: "510px",
           }}
         >
           <Image
             src="/images/hero-boy.png"
             alt="Student with laptop"
-            width={510}
-            height={550}
+            width={500}
+            height={574}
             priority
-            className="w-full h-auto object-contain drop-shadow-2xl"
+            className="w-full h-full object-contain object-bottom drop-shadow-2xl"
           />
         </div>
 
@@ -295,7 +296,7 @@ export function Hero() {
       <div className="lg:hidden relative z-20 flex flex-col items-center text-center px-4 pt-[130px] sm:pt-[150px]">
         {/* Heading */}
         <h1 className="text-white text-[34px] sm:text-[48px] font-semibold tracking-[-0.01em] leading-[1.2] max-w-[680px]">
-          Get Access to Hundreds Courses Available
+          Get Access to Hundreds <br /> Courses Available
         </h1>
 
         {/* Subtitle */}

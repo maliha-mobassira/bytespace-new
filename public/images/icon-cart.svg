@@ -1,4 +1,8 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M5 8.5C5 7.67157 5.67157 7 6.5 7H17.5C18.3284 7 19 7.67157 19 8.5V18.5C19 19.8807 17.8807 21 16.5 21H7.5C6.11929 21 5 19.8807 5 18.5V8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8.5 10V6.5C8.5 4.567 10.067 3 12 3C13.933 3 15.5 4.567 15.5 6.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <g fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Bag Body -->
+    <rect x="27" y="31" width="46" height="42" rx="7" />
+    <!-- Bag Handle -->
+    <path d="M39,31 V22 A11,11 0 0,1 61,22 V31" />
+  </g>
 </svg>

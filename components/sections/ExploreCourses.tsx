@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { CourseCard, Course } from "@/components/ui/CourseCard";
 
 interface Category {
   id: string;
@@ -36,6 +37,93 @@ const ROW_3: Category[] = [
   { id: "more", name: "+ More", isSpecial: true },
 ];
 
+const COURSES: Course[] = [
+  {
+    id: "figma-basic",
+    title: "Learn Figma from Basic",
+    author: "purepearl studio",
+    rating: 4.5,
+    level: "Beginner",
+    price: "$25",
+    period: "/lifetime",
+    image: "/images/course-thumb-1.png",
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    studentCount: "26+",
+  },
+  {
+    id: "digital-asset",
+    title: "Build Digital Asset",
+    author: "purepearl studio",
+    rating: 4.5,
+    level: "Beginner",
+    price: "$25",
+    period: "/lifetime",
+    image: "/images/course-thumb-2.png",
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    studentCount: "26+",
+  },
+  {
+    id: "big-data",
+    title: "the Power of Big Data",
+    author: "purepearl studio",
+    rating: 4.5,
+    level: "Beginner",
+    price: "$25",
+    period: "/lifetime",
+    image: "/images/course-thumb-3.png",
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    studentCount: "26+",
+  },
+  {
+    id: "productivity",
+    title: "Balancing Productivity an...",
+    author: "purepearl studio",
+    rating: 4.5,
+    level: "Beginner",
+    price: "$25",
+    period: "/lifetime",
+    image: "/images/course-thumb-4.png",
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    studentCount: "26+",
+  },
+  {
+    id: "money-management",
+    title: "Mastering Money Manage...",
+    author: "purepearl studio",
+    rating: 4.5,
+    level: "Beginner",
+    price: "$25",
+    period: "/lifetime",
+    image: "/images/course-thumb-5.png",
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    studentCount: "26+",
+  },
+  {
+    id: "startup-success",
+    title: "From Idea to Startup Succ...",
+    author: "purepearl studio",
+    rating: 4.5,
+    level: "Beginner",
+    price: "$25",
+    period: "/lifetime",
+    image: "/images/course-thumb-6.png",
+    lessons: "17 Lessons",
+    duration: "2 hours 16 mins",
+    comments: "59 Comments",
+    studentCount: "26+",
+  },
+];
+
 export function ExploreCourses() {
   const [activeCategory, setActiveCategory] = useState<string>("featured");
 
@@ -43,7 +131,7 @@ export function ExploreCourses() {
     <section
       id="explore-courses"
       aria-label="Explore Courses"
-      className="relative w-full bg-white pt-[72px] pb-[40px] overflow-hidden"
+      className="relative w-full bg-white pt-[72px] pb-[96px] overflow-hidden"
     >
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         {/* ========================================================================= */}
@@ -132,6 +220,18 @@ export function ExploreCourses() {
                 </button>
               );
             })}
+          </div>
+        </div>
+
+        {/* ========================================================================= */}
+        {/* Frame 8: Course Cards Grid (3 Columns x 2 Rows = 6 Cards)                */}
+        {/* Exact Figma: width: 1199px, height: 808px, gap: 40px, top: 1768px       */}
+        {/* ========================================================================= */}
+        <div className="w-full max-w-[1199px] mt-[56px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] justify-items-center">
+            {COURSES.map((course) => (
+              <CourseCard key={course.id} course={course} />
+            ))}
           </div>
         </div>
       </div>

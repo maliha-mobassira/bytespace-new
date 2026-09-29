@@ -218,59 +218,122 @@ export function AuthShowcase() {
       {/* 5. Happy Students Floating Lime Card                                     */}
       {/* Figma: width: 258px; height: 123px; left: 348px; top: 740px              */}
       {/* background: #D4FB20; backdrop-filter: blur(10px); border-radius: 16px;   */}
+      {/* padding: 16px; gap: 8px;                                                  */}
       {/* ========================================================================= */}
       <div
-        className="hidden lg:flex absolute z-[30] w-[258px] h-[123px] bg-[#D4FB20] backdrop-blur-[10px] rounded-[16px] p-[16px] flex-col justify-between shadow-[0_16px_36px_rgba(0,0,0,0.18)] select-none pointer-events-none"
-        style={{ left: "348px", top: "740px", boxSizing: "border-box" }}
+        className="hidden lg:flex absolute z-[30] bg-[#D4FB20] backdrop-blur-[10px] rounded-[16px] flex-col justify-center items-start gap-[8px] shadow-[0_16px_36px_rgba(0,0,0,0.18)] select-none pointer-events-none"
+        style={{
+          width: "258px",
+          height: "123px",
+          left: "348px",
+          top: "740px",
+          padding: "16px",
+          borderRadius: "16px",
+          boxSizing: "border-box",
+        }}
       >
-        <div className="flex flex-col gap-[2px]">
-          <h4 className="text-[16px] font-bold text-[#242528] leading-[120%] tracking-tight">
+        {/* Top Auto Layout Vertical (Figma: width: 115px; height: 40px; order: 0; flex-grow: 0;) */}
+        <div
+          className="flex flex-col items-start gap-[2px]"
+          style={{
+            width: "115px",
+            height: "40px",
+            flex: "none",
+            order: 0,
+            flexGrow: 0,
+          }}
+        >
+          {/* Happy Students (Label M: Satoshi 500, 16px, 120%, #242528) */}
+          <span
+            className="whitespace-nowrap"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontWeight: 500,
+              fontSize: "16px",
+              lineHeight: "120%",
+              color: "#242528",
+            }}
+          >
             Happy Students
-          </h4>
-          <div className="flex items-center gap-[4px] text-[13px] font-medium text-[#242528]">
-            <span className="font-bold">4.5</span>
-            <span>(240)</span>
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 24 24"
-              fill="#003BE2"
-              aria-hidden="true"
+          </span>
+
+          {/* Horizontal Row: 4.5 (240) + Blue Star */}
+          <div className="flex flex-row items-center gap-1.5 whitespace-nowrap">
+            <span
+              style={{
+                fontFamily: "var(--font-body)",
+                fontWeight: 400,
+                fontSize: "12px",
+                lineHeight: "160%",
+                color: "#242528",
+              }}
             >
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              4.5 (240)
+            </span>
+            <svg
+              width="14"
+              height="13"
+              viewBox="66 37 14 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0"
+            >
+              <path
+                d="M72.5248 37.9512C72.6752 37.492 73.3248 37.492 73.4752 37.9512L74.6932 41.6711C74.7603 41.8762 74.9514 42.015 75.1672 42.0155L79.0814 42.0244C79.5646 42.0255 79.7654 42.6433 79.3751 42.9282L76.2137 45.2361C76.0394 45.3634 75.9664 45.588 76.0326 45.7934L77.2337 49.5188C77.382 49.9787 76.8564 50.3605 76.4648 50.0774L73.293 47.7838C73.1181 47.6574 72.8819 47.6574 72.707 47.7838L69.5352 50.0774C69.1436 50.3605 68.618 49.9787 68.7663 49.5188L69.9674 45.7934C70.0336 45.588 69.9606 45.3634 69.7863 45.2361L66.6249 42.9282C66.2346 42.6433 66.4354 42.0255 66.9186 42.0244L70.8328 42.0155C71.0486 42.015 71.2397 41.8762 71.3068 41.6711L72.5248 37.9512Z"
+                fill="#003BE2"
+              />
             </svg>
           </div>
         </div>
 
-        {/* Auto Layout Horizontal: Avatars Ellipses Row */}
-        {/* Figma: width: 232px; height: 43px; flex: none; order: 1; flex-grow: 0; */}
+        {/* Bottom Auto Layout Horizontal: 7 Avatars + 1 Dark Circle "2K+" (Figma: width: 232px; height: 43px; order: 1; flex-grow: 0;) */}
         <div
-          className="flex flex-row items-center -space-x-[11px]"
+          className="flex flex-row items-center flex-none"
           style={{
             width: "232px",
             height: "43px",
-            flex: "none",
             order: 1,
             flexGrow: 0,
           }}
         >
-          {HAPPY_STUDENTS_AVATARS.map((avatar, idx) => (
+          {HAPPY_STUDENTS_AVATARS.map((src, idx) => (
             <div
               key={idx}
-              className="relative w-[38px] h-[38px] rounded-full border-2 border-[#D4FB20] overflow-hidden bg-neutral-200 shrink-0 shadow-xs"
+              className="relative w-[43px] h-[43px] rounded-full overflow-hidden shrink-0 border border-white/40 shadow-sm"
+              style={{
+                marginRight: "-16px",
+                zIndex: idx,
+              }}
             >
               <Image
-                src={avatar}
+                src={src}
                 alt=""
-                fill
-                sizes="38px"
+                width={43}
+                height={43}
                 unoptimized
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
-          <div className="relative w-[38px] h-[38px] rounded-full border-2 border-[#D4FB20] bg-[#242528] text-white text-[11px] font-bold flex items-center justify-center shrink-0 shadow-xs">
-            2K+
+          {/* 8th Circle: 2K+ Badge in #242528 dark with white text */}
+          <div
+            className="relative w-[43px] h-[43px] rounded-full shrink-0 flex items-center justify-center border border-white/40 shadow-sm"
+            style={{
+              backgroundColor: "#242528",
+              zIndex: 7,
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-body)",
+                fontWeight: 700,
+                fontSize: "12px",
+                lineHeight: "150%",
+                color: "#FFFFFF",
+              }}
+            >
+              2K+
+            </span>
           </div>
         </div>
       </div>

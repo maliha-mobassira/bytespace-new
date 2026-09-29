@@ -75,7 +75,7 @@ export function Navbar() {
               Sign In
             </Link>
             <Link
-              href="/signup"
+              href="/register"
               className="text-label-m text-white/80 hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1"
             >
               Join Us

@@ -32,6 +32,95 @@ export function CourseCard({ course }: CourseCardProps) {
           quality={95}
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
+
+        {/* Frosted Glass Badges Overlay (Figma Auto Layout Horizontal) */}
+        <div
+          className="absolute flex flex-row items-center gap-[12px] z-10 select-none pointer-events-none"
+          style={{
+            left: "12px",
+            top: "150px",
+            width: "315px",
+            height: "32px",
+          }}
+        >
+          {/* Tag 1: Lessons */}
+          <div
+            className="flex flex-col justify-center items-center shrink-0"
+            style={{
+              padding: "6px 12px",
+              background: "rgba(246, 246, 246, 0.6)",
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
+              borderRadius: "24px",
+              height: "32px",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                fontWeight: 500,
+                fontSize: "12px",
+                lineHeight: "20px",
+                color: "#4F4F4F",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {course.lessons || "17 Lessons"}
+            </span>
+          </div>
+
+          {/* Tag 2: Duration */}
+          <div
+            className="flex flex-col justify-center items-center shrink-0"
+            style={{
+              padding: "6px 12px",
+              background: "rgba(246, 246, 246, 0.6)",
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
+              borderRadius: "24px",
+              height: "32px",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                fontWeight: 500,
+                fontSize: "12px",
+                lineHeight: "20px",
+                color: "#4F4F4F",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {course.duration || "2 hours 16 mins"}
+            </span>
+          </div>
+
+          {/* Tag 3: Comments */}
+          <div
+            className="flex flex-col justify-center items-center shrink-0"
+            style={{
+              padding: "6px 12px",
+              background: "rgba(246, 246, 246, 0.6)",
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
+              borderRadius: "24px",
+              height: "32px",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                fontWeight: 500,
+                fontSize: "12px",
+                lineHeight: "20px",
+                color: "#4F4F4F",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {course.comments || "59 Comments"}
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* 2. Middle Block: Title, Rating, Author */}

@@ -46,6 +46,90 @@ export function AuthShowcase() {
             unoptimized
             className="w-full h-full object-cover"
           />
+
+          {/* Frosted Glass Badges Overlay (Figma Auto Layout Horizontal) */}
+          <div
+            className="absolute flex flex-row items-center gap-[12px] z-10 select-none pointer-events-none"
+            style={{
+              left: "12px",
+              top: "150px",
+              width: "315px",
+              height: "32px",
+            }}
+          >
+            <div
+              className="flex flex-col justify-center items-center shrink-0"
+              style={{
+                padding: "6px 12px",
+                background: "rgba(246, 246, 246, 0.6)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+                borderRadius: "24px",
+                height: "32px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  lineHeight: "20px",
+                  color: "#4F4F4F",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                17 Lessons
+              </span>
+            </div>
+            <div
+              className="flex flex-col justify-center items-center shrink-0"
+              style={{
+                padding: "6px 12px",
+                background: "rgba(246, 246, 246, 0.6)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+                borderRadius: "24px",
+                height: "32px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  lineHeight: "20px",
+                  color: "#4F4F4F",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                2 hours 16 mins
+              </span>
+            </div>
+            <div
+              className="flex flex-col justify-center items-center shrink-0"
+              style={{
+                padding: "6px 12px",
+                background: "rgba(246, 246, 246, 0.6)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+                borderRadius: "24px",
+                height: "32px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  lineHeight: "20px",
+                  color: "#4F4F4F",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                59 Comments
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Title, Rating, Author */}
@@ -107,7 +191,7 @@ export function AuthShowcase() {
       {/* ========================================================================= */}
       <div
         className="hidden lg:block absolute z-[12] w-[175px] h-[175px] pointer-events-none select-none"
-        style={{ left: "470px", top: "626px", transform: "scaleX(-1)" }}
+        style={{ left: "470px", top: "626px", transform: "matrix(-1, 0, 0, 1, 0, 0)" }}
       >
         <Image
           src="/images/cta/cta-wiggle-white.png"
@@ -159,6 +243,90 @@ export function AuthShowcase() {
             unoptimized
             className="w-full h-full object-cover"
           />
+
+          {/* Frosted Glass Badges Overlay (Figma Auto Layout Horizontal) */}
+          <div
+            className="absolute flex flex-row items-center gap-[12px] z-10 select-none pointer-events-none"
+            style={{
+              left: "12px",
+              top: "150px",
+              width: "315px",
+              height: "32px",
+            }}
+          >
+            <div
+              className="flex flex-col justify-center items-center shrink-0"
+              style={{
+                padding: "6px 12px",
+                background: "rgba(246, 246, 246, 0.6)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+                borderRadius: "24px",
+                height: "32px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  lineHeight: "20px",
+                  color: "#4F4F4F",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                17 Lessons
+              </span>
+            </div>
+            <div
+              className="flex flex-col justify-center items-center shrink-0"
+              style={{
+                padding: "6px 12px",
+                background: "rgba(246, 246, 246, 0.6)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+                borderRadius: "24px",
+                height: "32px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  lineHeight: "20px",
+                  color: "#4F4F4F",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                2 hours 16 mins
+              </span>
+            </div>
+            <div
+              className="flex flex-col justify-center items-center shrink-0"
+              style={{
+                padding: "6px 12px",
+                background: "rgba(246, 246, 246, 0.6)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+                borderRadius: "24px",
+                height: "32px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-body), 'Satoshi', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  lineHeight: "20px",
+                  color: "#4F4F4F",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                59 Comments
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Title, Rating, Author */}
@@ -373,6 +541,53 @@ export function AuthShowcase() {
               unoptimized
               className="w-full h-full object-cover"
             />
+            {/* Frosted Glass Badges Overlay */}
+            <div
+              className="absolute flex flex-row items-center gap-[12px] z-10 select-none pointer-events-none"
+              style={{
+                left: "12px",
+                top: "150px",
+                width: "315px",
+                height: "32px",
+              }}
+            >
+              <div
+                className="flex flex-col justify-center items-center shrink-0"
+                style={{
+                  padding: "6px 12px",
+                  background: "rgba(246, 246, 246, 0.6)",
+                  backdropFilter: "blur(4px)",
+                  borderRadius: "24px",
+                  height: "32px",
+                }}
+              >
+                <span className="text-[12px] font-medium text-[#4F4F4F] whitespace-nowrap">17 Lessons</span>
+              </div>
+              <div
+                className="flex flex-col justify-center items-center shrink-0"
+                style={{
+                  padding: "6px 12px",
+                  background: "rgba(246, 246, 246, 0.6)",
+                  backdropFilter: "blur(4px)",
+                  borderRadius: "24px",
+                  height: "32px",
+                }}
+              >
+                <span className="text-[12px] font-medium text-[#4F4F4F] whitespace-nowrap">2 hours 16 mins</span>
+              </div>
+              <div
+                className="flex flex-col justify-center items-center shrink-0"
+                style={{
+                  padding: "6px 12px",
+                  background: "rgba(246, 246, 246, 0.6)",
+                  backdropFilter: "blur(4px)",
+                  borderRadius: "24px",
+                  height: "32px",
+                }}
+              >
+                <span className="text-[12px] font-medium text-[#4F4F4F] whitespace-nowrap">59 Comments</span>
+              </div>
+            </div>
           </div>
           <div className="flex flex-col gap-[4px] mt-[6px]">
             <div className="flex items-center justify-between">

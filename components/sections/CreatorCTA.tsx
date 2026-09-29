@@ -152,24 +152,24 @@ export function CreatorCTA() {
         </div>
 
         {/* 6. Middle-Right White Cylinder */}
-        {/* Figma: width: 370px; left: calc(50% - 370px/2 + 691px) = 1226px; top: 1.23% = 6px */}
+        {/* Positioned on the right side matching Figma: visible tilted cylinder framing the right border */}
         <div
           className="absolute pointer-events-none"
           style={{
-            left: "1226px",
-            top: "6px",
-            width: "370px",
-            height: "370px",
+            left: "1160px",
+            top: "15px",
+            width: "280px",
+            height: "280px",
           }}
         >
           <Image
             src="/images/cta/cta-cylinder-white.png"
             alt=""
-            width={370}
-            height={370}
+            width={280}
+            height={280}
             priority
             unoptimized
-            className="w-full h-full object-contain drop-shadow-2xl"
+            className="w-full h-full object-contain drop-shadow-2xl grayscale brightness-105"
           />
         </div>
 

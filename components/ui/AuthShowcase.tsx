@@ -186,13 +186,13 @@ export function AuthShowcase() {
       </div>
 
       {/* ========================================================================= */}
-      {/* 2. White Squiggle 3D Shape (Flipped Horizontally)                         */}
-      {/* Figma: width: 175px; left: calc(50% - 175px/2 - 162.5px) = 470px; top: 626px */}
+      {/* 2. White Squiggle 3D Shape                                                */}
+      {/* Figma: width: 175.81px; left: 470px; top: 626px                           */}
       {/* Floats above bottom-right of front card, under Happy Students card         */}
       {/* ========================================================================= */}
       <div
         className="hidden lg:block absolute z-[25] w-[175px] h-[175px] pointer-events-none select-none"
-        style={{ left: "470px", top: "626px", transform: "matrix(-1, 0, 0, 1, 0, 0)" }}
+        style={{ left: "470px", top: "626px" }}
       >
         <Image
           src="/images/cta/cta-wiggle-white.png"

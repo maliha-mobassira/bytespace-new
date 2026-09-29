@@ -5,6 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
+import { MAIN_NAV_LINKS, AUTH_NAV_LINKS } from "@/lib/data/navigation";
+
+/**
+ * Navbar Component
+ * Desktop & mobile responsive header navigation over hero section.
+ */
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -44,42 +50,30 @@ export function Navbar() {
           aria-label="Main Navigation"
           className="hidden md:flex items-center gap-8 lg:gap-10 absolute left-1/2 -translate-x-1/2"
         >
-          <Link
-            href="/"
-            className="text-label-m text-white font-medium hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1 px-2"
-          >
-            Home
-          </Link>
-          <Link
-            href="/courses"
-            className="text-label-m text-white/70 hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1 px-2"
-          >
-            Courses
-          </Link>
-          <Link
-            href="/creators"
-            className="text-label-m text-white/70 hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1 px-2"
-          >
-            Creators
-          </Link>
+          {MAIN_NAV_LINKS.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-label-m text-white/80 hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1 px-2"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Right Section: Auth Links & Cart */}
         <div className="flex items-center gap-6 lg:gap-8">
           {/* Desktop Auth Links */}
           <div className="hidden sm:flex items-center gap-6 lg:gap-8">
-            <Link
-              href="/login"
-              className="text-label-m text-white/80 hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/register"
-              className="text-label-m text-white/80 hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1"
-            >
-              Join Us
-            </Link>
+            {AUTH_NAV_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-label-m text-white/80 hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-md py-1"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Cart Icon Button */}

@@ -4,16 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
-interface StatItem {
-  value: string;
-  label: string;
-}
-
-const STATS: StatItem[] = [
-  { value: "12K", label: "Students" },
-  { value: "70+", label: "Courses" },
-  { value: "16", label: "Creators" },
-];
+import { GROWTH_STATS } from "@/lib/data/features";
 
 /**
  * ProfessionalGrowth Section
@@ -63,7 +54,7 @@ export function ProfessionalGrowth() {
 
             {/* Stats Row */}
             <div className="flex items-center gap-[40px] sm:gap-[56px] pt-[8px]">
-              {STATS.map((stat, idx) => (
+              {GROWTH_STATS.map((stat, idx) => (
                 <div key={idx} className="flex flex-col items-start">
                   <span className="text-[32px] sm:text-[36px] font-bold text-[#0043FF] leading-none">
                     {stat.value}

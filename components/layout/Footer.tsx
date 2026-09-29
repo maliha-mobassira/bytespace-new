@@ -4,48 +4,20 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { FOOTER_NAV_COLUMNS, LEGAL_LINKS } from "@/lib/data/navigation";
+
+/**
+ * Footer Component
+ * Global footer with newsletter signup, categorization columns, and copyright.
+ */
 export function Footer() {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    // Newsletter subscription handling
     setEmail("");
   };
-
-  const navColumns = [
-    {
-      id: "browse",
-      links: [
-        { label: "Featured Courses", href: "/courses" },
-        { label: "Featured Categories", href: "/categories" },
-        { label: "Business", href: "/category/business" },
-        { label: "IT", href: "/category/it" },
-        { label: "Design", href: "/category/design" },
-      ],
-    },
-    {
-      id: "categories",
-      links: [
-        { label: "Development", href: "/category/development" },
-        { label: "Marketing", href: "/category/marketing" },
-        { label: "Photography", href: "/category/photography" },
-        { label: "Finance", href: "/category/finance" },
-        { label: "Sport", href: "/category/sport" },
-      ],
-    },
-    {
-      id: "platform",
-      links: [
-        { label: "Become a Creator", href: "/creator" },
-        { label: "Affiliate Program", href: "/affiliate" },
-        { label: "Contact", href: "/contact" },
-        { label: "Help", href: "/help" },
-        { label: "About", href: "/about" },
-      ],
-    },
-  ];
 
   return (
     <footer
@@ -131,9 +103,9 @@ export function Footer() {
 
           {/* Right Column: Navigation Links (3 columns, 40px gap) */}
           <div className="w-full max-w-[580px] grid grid-cols-2 sm:grid-cols-3 gap-[32px] sm:gap-[40px]">
-            {navColumns.map((col) => (
+            {FOOTER_NAV_COLUMNS.map((col, idx) => (
               <div
-                key={col.id}
+                key={idx}
                 className="flex flex-col items-start gap-[16px]"
               >
                 {col.links.map((link) => (
@@ -164,24 +136,15 @@ export function Footer() {
             </p>
 
             <div className="flex items-center gap-[24px] flex-wrap justify-center">
-              <Link
-                href="/privacy"
-                className="text-[12px] font-normal text-[#242528] leading-[160%] font-body hover:text-[#003BE2] transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-[12px] font-normal text-[#242528] leading-[160%] font-body hover:text-[#003BE2] transition-colors"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="/cookies"
-                className="text-[12px] font-normal text-[#242528] leading-[160%] font-body hover:text-[#003BE2] transition-colors"
-              >
-                Cookies Settings
-              </Link>
+              {LEGAL_LINKS.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-[12px] font-normal text-[#242528] leading-[160%] font-body hover:text-[#003BE2] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

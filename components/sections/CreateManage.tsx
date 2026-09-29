@@ -4,12 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
-const CHECKLIST_ITEMS = [
-  "Share Your Expertise",
-  "Monetize Your Passion",
-  "Flexibility and Autonomy",
-  "Build a Community",
-];
+import { COURSE_CREATION_CHECKLIST } from "@/lib/data/features";
 
 /**
  * CreateManage Section
@@ -73,7 +68,7 @@ export function CreateManage() {
 
             {/* Checklist with Solid Blue Checkmark Icons */}
             <div className="flex flex-col items-start gap-[16px]">
-              {CHECKLIST_ITEMS.map((item, idx) => (
+              {COURSE_CREATION_CHECKLIST.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-[16px]">
                   <div
                     className="w-[24px] h-[24px] rounded-full bg-[#0043FF] flex items-center justify-center shrink-0 text-white shadow-xs"

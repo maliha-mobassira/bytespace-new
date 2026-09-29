@@ -3,45 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-interface TestimonialItem {
-  id: string;
-  name: string;
-  role: string;
-  avatar: string;
-  quote: string;
-  cardHeightClass?: string;
-  offsetClass?: string;
-}
-
-const testimonials: TestimonialItem[] = [
-  {
-    id: "sarah-m",
-    name: "Sarah M.",
-    role: "Enthusiastic Learner",
-    avatar: "/images/testimonial-1.jpg",
-    quote:
-      '"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."',
-    cardHeightClass: "md:h-[436px]",
-  },
-  {
-    id: "james-l",
-    name: "James L.",
-    role: "Lifelong Learner",
-    avatar: "/images/testimonial-2.jpg",
-    quote:
-      '"I\'ve tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."',
-    cardHeightClass: "md:h-[436px]",
-  },
-  {
-    id: "alex-b",
-    name: "Alex B.",
-    role: "Inspired Creator",
-    avatar: "/images/testimonial-3.jpg",
-    quote:
-      '"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It\'s fulfilling to see my courses making a positive impact on learners globally."',
-    cardHeightClass: "md:h-[436px]",
-  },
-];
+import { TESTIMONIALS } from "@/lib/data/testimonials";
 
 export function Testimonials() {
   return (
@@ -122,7 +84,7 @@ export function Testimonials() {
 
         {/* Testimonials Cards Row (Exact Figma 374px cards, 41px gap) */}
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-center gap-[24px] lg:gap-[41px]">
-          {testimonials.map((item) => (
+          {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
               className="w-full max-w-[374px] md:w-[374px] md:h-[436px] bg-[#FFFFFF] rounded-[24px] p-[24px] flex flex-col items-start gap-[24px] shadow-[0px_4px_30px_rgba(0,0,0,0.04)]"

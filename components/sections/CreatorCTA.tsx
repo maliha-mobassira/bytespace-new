@@ -152,7 +152,7 @@ export function CreatorCTA() {
         </div>
 
         {/* 6. Middle-Right White Cylinder */}
-        {/* Figma: tilted cylinder to the right of the cone, framing the right edge */}
+        {/* Figma: pure clean white 3D cylinder framing the right edge */}
         <div
           className="absolute pointer-events-none z-10"
           style={{
@@ -163,13 +163,13 @@ export function CreatorCTA() {
           }}
         >
           <Image
-            src="/images/cta/cta-cylinder-white.png"
+            src="/images/cta/cta-cylinder-white-bright.png"
             alt=""
             width={270}
             height={270}
             priority
             unoptimized
-            className="w-full h-full object-contain drop-shadow-2xl grayscale brightness-105"
+            className="w-full h-full object-contain drop-shadow-2xl"
           />
         </div>
 

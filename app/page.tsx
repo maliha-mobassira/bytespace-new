@@ -1,45 +1,50 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Hero } from "@/components/sections/Hero";
-import { PartnerLogos } from "@/components/sections/PartnerLogos";
-import { ExploreCourses } from "@/components/sections/ExploreCourses";
-import { LearningPaths } from "@/components/sections/LearningPaths";
-import { ProfessionalGrowth } from "@/components/sections/ProfessionalGrowth";
-import { CreateManage } from "@/components/sections/CreateManage";
-import { CTASection } from "@/components/sections/CTASection";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Footer } from "@/components/layout/Footer";
+import { Navbar, Footer } from "@/components/layout";
+import {
+  Hero,
+  LogoStrip,
+  Discover,
+  LearningPaths,
+  ProfessionalGrowth,
+  CreateManage,
+  CreatorCTA,
+  Testimonials,
+} from "@/components/sections";
 
+/**
+ * ByteSpace Landing Page
+ * Composes all landing page sections in logical presentation hierarchy.
+ */
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-white">
-      {/* 1. Navbar transparent over Hero */}
+      {/* 1. Header Navigation */}
       <Navbar />
 
       {/* 2. Hero Section */}
       <Hero />
 
-      {/* 3. Partner Logos Ribbon (Frame 2) */}
-      <PartnerLogos />
+      {/* 3. Partner Logos Ribbon (LogoStrip) */}
+      <LogoStrip />
 
-      {/* 4. Explore Courses (Frame 3, Tab_Categories, Frame 8) */}
-      <ExploreCourses />
+      {/* 4. Discover Courses (Categories & Course Cards) */}
+      <Discover />
 
-      {/* 5. Learning Paths (Frame 9 & Frame 10) */}
+      {/* 5. Learning Paths */}
       <LearningPaths />
 
-      {/* 6. Professional Growth (Boy composition: 621px x 552px) */}
+      {/* 6. Professional Growth Feature */}
       <ProfessionalGrowth />
 
-      {/* 7. Create & Manage Courses (Girl composition: 541px x 596px) */}
+      {/* 7. Create & Manage Courses Feature */}
       <CreateManage />
 
-      {/* 7. Call To Action (CTA_Frame) */}
-      <CTASection />
+      {/* 8. Call To Action (CreatorCTA) */}
+      <CreatorCTA />
 
-      {/* 8. Testimonials (Testimonials_Frame) */}
+      {/* 9. Testimonials */}
       <Testimonials />
 
-      {/* 9. Footer (Footer_Frame) */}
+      {/* 10. Footer */}
       <Footer />
     </div>
   );

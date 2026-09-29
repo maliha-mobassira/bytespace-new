@@ -95,6 +95,10 @@ const CATEGORIES: CategoryCardItem[] = [
   },
 ];
 
+/**
+ * LearningPaths Section Component
+ * Displays grid of career tracks and categories with custom icon badges.
+ */
 export function LearningPaths() {
   return (
     <section

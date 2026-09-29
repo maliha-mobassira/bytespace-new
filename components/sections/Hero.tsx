@@ -4,6 +4,10 @@ import React from "react";
 import Image from "next/image";
 import { SearchBar } from "@/components/ui/SearchBar";
 
+/**
+ * Hero Section Component
+ * Features main headline, search bar, student avatar counters, and 3D floating ornaments.
+ */
 export function Hero() {
   const studentAvatars = [
     "/images/avatar-1.jpg",

@@ -187,18 +187,17 @@ export function AuthShowcase() {
 
       {/* ========================================================================= */}
       {/* 2. White Squiggle 3D Shape                                                */}
-      {/* Figma: width: 175.81px; left: 470px; top: 626px                           */}
-      {/* Floats above bottom-right of front card, under Happy Students card         */}
+      {/* Floats above bottom-right of front card AND above Happy Students card     */}
       {/* ========================================================================= */}
       <div
-        className="hidden lg:block absolute z-[25] w-[175px] h-[175px] pointer-events-none select-none"
-        style={{ left: "470px", top: "626px" }}
+        className="hidden lg:block absolute z-[35] w-[150px] h-[150px] pointer-events-none select-none"
+        style={{ left: "475px", top: "632px" }}
       >
         <Image
           src="/images/cta/cta-wiggle-white.png"
           alt=""
-          width={175}
-          height={175}
+          width={150}
+          height={150}
           priority
           unoptimized
           className="w-full h-full object-contain drop-shadow-[0_16px_28px_rgba(0,0,0,0.18)]"

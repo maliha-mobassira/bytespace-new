@@ -201,8 +201,8 @@ export function CreatorCTA() {
           Unlock Your Potential as a Creator with ByteSpace
         </h2>
 
-        {/* Body L (width: max 840px, 3 lines) */}
-        <p className="w-full max-w-[840px] text-[15px] sm:text-[17px] lg:text-[18px] text-[#F5F5F6] font-normal leading-[160%] text-center font-body">
+        {/* Body L (width: max 920px, 3 lines matching Figma) */}
+        <p className="w-full max-w-[920px] text-[15px] sm:text-[17px] lg:text-[18px] text-[#F5F5F6] font-normal leading-[160%] text-center font-body">
           Experience the collaboration of numerous creators and an expanding
           selection of courses. Register now and become a part of a community
           comprising over 10,000 local and international creators. Utilize our

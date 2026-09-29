@@ -242,24 +242,34 @@ export function AuthShowcase() {
           </div>
         </div>
 
-        {/* 7 Avatars + 2K+ Badge */}
-        <div className="flex items-center -space-x-[8px]">
+        {/* Auto Layout Horizontal: Avatars Ellipses Row */}
+        {/* Figma: width: 232px; height: 43px; flex: none; order: 1; flex-grow: 0; */}
+        <div
+          className="flex flex-row items-center -space-x-[11px]"
+          style={{
+            width: "232px",
+            height: "43px",
+            flex: "none",
+            order: 1,
+            flexGrow: 0,
+          }}
+        >
           {HAPPY_STUDENTS_AVATARS.map((avatar, idx) => (
             <div
               key={idx}
-              className="relative w-[28px] h-[28px] rounded-full border-2 border-[#D4FB20] overflow-hidden bg-neutral-200 shrink-0"
+              className="relative w-[38px] h-[38px] rounded-full border-2 border-[#D4FB20] overflow-hidden bg-neutral-200 shrink-0 shadow-xs"
             >
               <Image
                 src={avatar}
                 alt=""
                 fill
-                sizes="28px"
+                sizes="38px"
                 unoptimized
                 className="object-cover"
               />
             </div>
           ))}
-          <div className="relative w-[28px] h-[28px] rounded-full border-2 border-[#D4FB20] bg-[#242528] text-white text-[10px] font-bold flex items-center justify-center shrink-0">
+          <div className="relative w-[38px] h-[38px] rounded-full border-2 border-[#D4FB20] bg-[#242528] text-white text-[11px] font-bold flex items-center justify-center shrink-0 shadow-xs">
             2K+
           </div>
         </div>

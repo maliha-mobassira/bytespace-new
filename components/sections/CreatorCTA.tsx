@@ -174,21 +174,22 @@ export function CreatorCTA() {
         </div>
 
         {/* 7. Bottom-Right Lime Squiggle */}
-        {/* Figma: compact horizontal squiggle under the cylinder, left loop tucked under text border */}
+        {/* Figma: flipped horizontally like a number "3", top cap on left, loops under cylinder */}
         <div
           className="absolute pointer-events-none z-10"
           style={{
-            left: "1130px",
-            top: "275px",
-            width: "210px",
-            height: "220px",
+            left: "1140px",
+            top: "260px",
+            width: "220px",
+            height: "260px",
+            transform: "scaleX(-1)",
           }}
         >
           <Image
             src="/images/shape-squiggle-lime.png"
             alt=""
-            width={210}
-            height={220}
+            width={220}
+            height={260}
             priority
             unoptimized
             className="w-full h-full object-contain drop-shadow-xl"

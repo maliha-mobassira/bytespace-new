@@ -15,14 +15,13 @@ export interface AuthLayoutProps {
 
 /**
  * AuthLayout Component
- * Provides full-bleed Persian Blue background with 120px grid, minimalist "b" logo mark,
- * left promotional content with razor-sharp vector cards showcase, and right form slot.
+ * Full-bleed Persian Blue canvas with 120px grid, minimalist "b" logo mark,
+ * individual 3D showcase elements placed at exact Figma coordinates, and right form slot.
  */
 export function AuthLayout({
   children,
   heading,
   description,
-  showcaseImage,
 }: AuthLayoutProps) {
   return (
     <main
@@ -58,7 +57,12 @@ export function AuthLayout({
         </header>
 
         {/* ========================================================================= */}
-        {/* Main 2-Column Content Layout (Left: Text & Showcase, Right: Form Slot)    */}
+        {/* Individual Vector & 3D Showcase Elements placed at exact Figma positions */}
+        {/* ========================================================================= */}
+        <AuthShowcase />
+
+        {/* ========================================================================= */}
+        {/* Main 2-Column Content Layout (Left: Text, Right: Form Slot)               */}
         {/* ========================================================================= */}
         <div className="relative w-full px-6 lg:px-0 flex flex-col lg:block">
           {/* Left Column Text (width: 475px, top: 0px, left: 122px) */}
@@ -69,23 +73,6 @@ export function AuthLayout({
             <p className="text-[18px] font-normal text-[#F5F5F6] leading-[160%] font-body">
               {description}
             </p>
-          </div>
-
-          {/* Left Column Graphic Showcase: Vector-Sharp Real Components & 2x Assets */}
-          <div className="mt-8 lg:mt-0 lg:absolute lg:left-[0px] lg:top-[0px] w-full lg:w-[680px] h-auto lg:h-[850px] z-10">
-            {showcaseImage && showcaseImage !== "/images/register-showcase.png" ? (
-              <div className="relative w-full h-[585px]">
-                <Image
-                  src={showcaseImage}
-                  alt="Showcase"
-                  fill
-                  priority
-                  className="object-contain object-left-top"
-                />
-              </div>
-            ) : (
-              <AuthShowcase />
-            )}
           </div>
 
           {/* Right Column Slot: Form Card */}

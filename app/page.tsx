@@ -4,6 +4,7 @@ import { PartnerLogos } from "@/components/sections/PartnerLogos";
 import { ExploreCourses } from "@/components/sections/ExploreCourses";
 import { LearningPaths } from "@/components/sections/LearningPaths";
 import { ProfessionalGrowth } from "@/components/sections/ProfessionalGrowth";
+import { CreateManage } from "@/components/sections/CreateManage";
 import { CTASection } from "@/components/sections/CTASection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/layout/Footer";
@@ -26,8 +27,11 @@ export default function Home() {
       {/* 5. Learning Paths (Frame 9 & Frame 10) */}
       <LearningPaths />
 
-      {/* 6. Professional Growth & Course Features (Frame 13) */}
+      {/* 6. Professional Growth (Boy composition: 621px x 552px) */}
       <ProfessionalGrowth />
+
+      {/* 7. Create & Manage Courses (Girl composition: 541px x 596px) */}
+      <CreateManage />
 
       {/* 7. Call To Action (CTA_Frame) */}
       <CTASection />

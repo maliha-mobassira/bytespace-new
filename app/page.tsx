@@ -6,6 +6,7 @@ import { LearningPaths } from "@/components/sections/LearningPaths";
 import { ProfessionalGrowth } from "@/components/sections/ProfessionalGrowth";
 import { CTASection } from "@/components/sections/CTASection";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -33,6 +34,9 @@ export default function Home() {
 
       {/* 8. Testimonials (Testimonials_Frame) */}
       <Testimonials />
+
+      {/* 9. Footer (Footer_Frame) */}
+      <Footer />
     </div>
   );
 }

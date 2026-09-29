@@ -22,15 +22,15 @@ export default function LoginPage() {
       heading="Sign in with ease"
       description="Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge."
     >
-      {/* Right Column: Login Card (579px x 784px min) */}
-      <div className="mt-12 lg:mt-0 lg:absolute lg:left-[741px] lg:top-[0px] w-full max-w-[579px] min-h-[784px] bg-[#FFFFFF] rounded-[24px] shadow-[0px_10px_50px_rgba(0,0,0,0.15)] flex flex-col justify-between p-[32px] sm:p-[48px] lg:p-[61px_63px] z-20">
+      {/* Right Column: Login Card (Figma max-w 579px, responsive height) */}
+      <div className="mt-8 lg:mt-0 lg:absolute lg:left-[741px] lg:top-[0px] w-full max-w-[579px] bg-[#FFFFFF] rounded-[24px] shadow-[0px_10px_50px_rgba(0,0,0,0.15)] flex flex-col justify-between p-[28px] sm:p-[36px] lg:p-[44px_48px] xl:p-[52px_56px] z-20">
         <div className="w-full flex flex-col items-start">
           {/* Header Title Stack */}
-          <div className="flex flex-col items-start mb-[32px] lg:mb-[40px]">
-            <span className="text-[18px] font-normal text-[#003BE2] leading-[160%] font-body">
+          <div className="flex flex-col items-start mb-[24px] lg:mb-[28px]">
+            <span className="text-[16px] sm:text-[18px] font-normal text-[#003BE2] leading-[140%] font-body">
               Sign In
             </span>
-            <h2 className="text-[32px] sm:text-[38px] lg:text-[44px] font-semibold text-[#242528] tracking-[-0.01em] leading-[120%] font-heading mt-[4px]">
+            <h2 className="text-[30px] sm:text-[36px] lg:text-[40px] font-semibold text-[#242528] tracking-[-0.01em] leading-[120%] font-heading mt-[2px]">
               Welcome Back
             </h2>
           </div>
@@ -38,7 +38,7 @@ export default function LoginPage() {
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            className="w-full flex flex-col items-end gap-[24px]"
+            className="w-full flex flex-col items-end gap-[18px] lg:gap-[20px]"
           >
             <Input
               id="email"
@@ -62,30 +62,30 @@ export default function LoginPage() {
 
             <button
               type="submit"
-              className="inline-flex items-center justify-center px-[32px] h-[46px] bg-[#D4FB20] text-[#242528] rounded-[24px] text-[18px] font-medium leading-[120%] font-body shadow-sm hover:brightness-105 active:scale-95 transition-all duration-200 cursor-pointer select-none"
+              className="inline-flex items-center justify-center px-[32px] h-[46px] bg-[#D4FB20] text-[#242528] rounded-[24px] text-[17px] font-medium leading-[120%] font-body shadow-sm hover:brightness-105 active:scale-95 transition-all duration-200 cursor-pointer select-none"
             >
               Sign In
             </button>
           </form>
 
           {/* Divider: or */}
-          <div className="relative w-full flex items-center justify-center my-[36px] lg:my-[44px]">
+          <div className="relative w-full flex items-center justify-center my-[24px] lg:my-[28px]">
             <div className="w-full h-[1px] bg-[#CED0D3]" />
-            <span className="absolute bg-[#FFFFFF] px-[16px] text-[16px] font-normal text-[#82868E] font-body">
+            <span className="absolute bg-[#FFFFFF] px-[16px] text-[15px] font-normal text-[#82868E] font-body">
               or
             </span>
           </div>
 
           {/* Social Login Buttons */}
-          <div className="w-full flex items-center justify-center gap-[20px]">
+          <div className="w-full flex items-center justify-center gap-[16px]">
             {/* Facebook Button */}
             <button
               type="button"
               aria-label="Sign in with Facebook"
-              className="w-[56px] h-[56px] rounded-[16px] border border-[#CED0D3] flex items-center justify-center text-[#242528] hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 transition-all duration-200 cursor-pointer"
+              className="w-[52px] h-[52px] rounded-[16px] border border-[#CED0D3] flex items-center justify-center text-[#242528] hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 transition-all duration-200 cursor-pointer"
             >
               <svg
-                className="w-[26px] h-[26px]"
+                className="w-[24px] h-[24px]"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -97,10 +97,10 @@ export default function LoginPage() {
             <button
               type="button"
               aria-label="Sign in with Google"
-              className="w-[56px] h-[56px] rounded-[16px] border border-[#CED0D3] flex items-center justify-center text-[#242528] hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 transition-all duration-200 cursor-pointer"
+              className="w-[52px] h-[52px] rounded-[16px] border border-[#CED0D3] flex items-center justify-center text-[#242528] hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 transition-all duration-200 cursor-pointer"
             >
               <svg
-                className="w-[24px] h-[24px]"
+                className="w-[22px] h-[22px]"
                 viewBox="0 0 24 24"
                 fill="none"
               >
@@ -126,13 +126,13 @@ export default function LoginPage() {
         </div>
 
         {/* Footer Link */}
-        <div className="w-full flex items-center justify-center gap-[4px] pt-[32px] lg:pt-0">
-          <span className="text-[16px] font-normal text-[#4B4C53] leading-[160%] font-body">
+        <div className="w-full flex items-center justify-center gap-[4px] pt-[24px] lg:pt-[28px]">
+          <span className="text-[15px] sm:text-[16px] font-normal text-[#4B4C53] leading-[160%] font-body">
             New user?
           </span>
           <Link
             href="/register"
-            className="text-[16px] font-normal text-[#003BE2] leading-[160%] font-body hover:underline transition-all"
+            className="text-[15px] sm:text-[16px] font-normal text-[#003BE2] leading-[160%] font-body hover:underline transition-all"
           >
             Create an account
           </Link>

@@ -25,7 +25,7 @@ export function AuthLayout({
 }: AuthLayoutProps) {
   return (
     <main
-      className="relative w-full min-h-screen lg:min-h-[1024px] bg-[#003BE2] overflow-x-hidden flex justify-center selection:bg-secondary-400 selection:text-neutral-950"
+      className="relative w-full min-h-screen bg-[#003BE2] overflow-x-hidden flex justify-center selection:bg-secondary-400 selection:text-neutral-950 py-4 lg:py-6"
       style={{
         backgroundImage: `
           linear-gradient(to right, rgba(255, 255, 255, 0.12) 2px, transparent 2px),
@@ -34,11 +34,11 @@ export function AuthLayout({
         backgroundSize: "120px 120px",
       }}
     >
-      <div className="relative w-full max-w-[1440px] min-h-[1024px] pb-12 lg:pb-0">
+      <div className="relative w-full max-w-[1440px] min-h-full pb-8 lg:pb-6 flex flex-col justify-start">
         {/* ========================================================================= */}
         {/* Header Bar: Only the "b" Logo Mark                                       */}
         {/* ========================================================================= */}
-        <header className="w-full h-[100px] lg:h-[120px] px-6 lg:px-[122px] flex items-center">
+        <header className="w-full h-[70px] lg:h-[84px] px-6 lg:px-[122px] flex items-center shrink-0">
           <Link
             href="/"
             className="flex items-center focus:outline-none group transition-transform duration-200 active:scale-95"
@@ -64,13 +64,13 @@ export function AuthLayout({
         {/* ========================================================================= */}
         {/* Main 2-Column Content Layout (Left: Text, Right: Form Slot)               */}
         {/* ========================================================================= */}
-        <div className="relative w-full px-6 lg:px-0 flex flex-col lg:block">
+        <div className="relative w-full px-6 lg:px-0 flex flex-col lg:block mt-2 lg:mt-0">
           {/* Left Column Text (width: 475px, top: 0px, left: 122px) */}
-          <div className="lg:absolute lg:left-[122px] lg:top-[0px] w-full max-w-[475px] flex flex-col items-start gap-[16px] z-10">
+          <div className="lg:absolute lg:left-[122px] lg:top-[0px] w-full max-w-[475px] flex flex-col items-start gap-[14px] z-10">
             <h1 className="text-[20px] font-semibold text-[#F5F5F6] tracking-[-0.01em] leading-[120%] font-heading">
               {heading}
             </h1>
-            <p className="text-[18px] font-normal text-[#F5F5F6] leading-[160%] font-body">
+            <p className="text-[16px] sm:text-[17px] font-normal text-[#F5F5F6] leading-[150%] font-body">
               {description}
             </p>
           </div>

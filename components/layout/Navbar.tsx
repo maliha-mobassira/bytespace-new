@@ -172,7 +172,7 @@ export function Navbar() {
                 Sign In
               </Link>
               <Link
-                href="/signup"
+                href="/register"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-label-m text-secondary-500 font-semibold py-2"
               >

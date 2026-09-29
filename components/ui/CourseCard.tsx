@@ -2,33 +2,17 @@
 
 import React from "react";
 import Image from "next/image";
+import { Course } from "@/lib/types";
+import { AvatarStack } from "@/components/ui/AvatarStack";
 
-export interface Course {
-  id: string;
-  title: string;
-  author: string;
-  rating: number;
-  level: string;
-  price: string;
-  period: string;
-  image: string;
-  lessons: string;
-  duration: string;
-  comments: string;
-  studentCount: string;
-}
-
-interface CourseCardProps {
+export interface CourseCardProps {
   course: Course;
 }
 
-const STUDENT_AVATARS = [
-  "/images/avatar-1.jpg",
-  "/images/avatar-2.jpg",
-  "/images/avatar-3.jpg",
-  "/images/avatar-4.jpg",
-];
-
+/**
+ * CourseCard Component
+ * Displays course thumbnail, title, rating, instructor, level badge, student avatars, and price.
+ */
 export function CourseCard({ course }: CourseCardProps) {
   return (
     <article
@@ -103,26 +87,7 @@ export function CourseCard({ course }: CourseCardProps) {
         </div>
 
         {/* Student Avatars Overlapping Group */}
-        <div className="flex items-center -space-x-[8px]">
-          {STUDENT_AVATARS.map((avatar, idx) => (
-            <div
-              key={idx}
-              className="relative w-[28px] h-[28px] rounded-full border-2 border-white overflow-hidden bg-neutral-200"
-            >
-              <Image
-                src={avatar}
-                alt=""
-                fill
-                sizes="28px"
-                className="object-cover"
-              />
-            </div>
-          ))}
-          {/* Lime + Badge */}
-          <div className="relative w-[28px] h-[28px] rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[11px] font-bold flex items-center justify-center select-none shadow-xs">
-            {course.studentCount}
-          </div>
-        </div>
+        <AvatarStack countBadge={course.studentCount} />
       </div>
 
       {/* 4. Price Row */}

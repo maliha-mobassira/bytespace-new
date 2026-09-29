@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500,400&display=swap");
 
 @theme inline {
   --font-heading: var(--font-poppins);
   --font-body: var(--font-satoshi);
+  --font-clash: "Clash Display", sans-serif;
 
   --color-neutral-50: #f5f5f6;
   --color-neutral-100: #e5e6e8;

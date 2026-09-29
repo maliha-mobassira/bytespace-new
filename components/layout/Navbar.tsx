@@ -14,17 +14,29 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-lg group transition-transform duration-200 active:scale-95"
+          className="flex items-center gap-[8.2px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-lg group transition-transform duration-200 active:scale-95"
           aria-label="ByteSpace Home"
         >
-          <Image
-            src="/images/logo.svg"
-            alt="ByteSpace"
-            width={160}
-            height={36}
-            priority
-            className="h-9 w-auto object-contain"
-          />
+          <div className="relative w-[28.88px] h-[31.5px] shrink-0">
+            <Image
+              src="/images/logo-mark.svg"
+              alt=""
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
+          <span
+            className="text-white tracking-tight"
+            style={{
+              fontFamily: "var(--font-clash, 'Clash Display', sans-serif)",
+              fontWeight: 700,
+              fontSize: "24px",
+              lineHeight: "100%",
+            }}
+          >
+            ByteSpace
+          </span>
         </Link>
 
         {/* Desktop Navigation Links (Centered) */}

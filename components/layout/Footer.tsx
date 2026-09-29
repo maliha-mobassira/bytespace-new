@@ -76,7 +76,15 @@ export function Footer() {
                     className="object-contain"
                   />
                 </div>
-                <span className="font-heading font-bold text-[24px] leading-[30px] text-[#242528] tracking-tight">
+                <span
+                  className="text-[#242528] tracking-tight"
+                  style={{
+                    fontFamily: "var(--font-clash, 'Clash Display', sans-serif)",
+                    fontWeight: 700,
+                    fontSize: "24px",
+                    lineHeight: "100%",
+                  }}
+                >
                   ByteSpace
                 </span>
               </Link>

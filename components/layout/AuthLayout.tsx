@@ -38,7 +38,7 @@ export function AuthLayout({
         {/* ========================================================================= */}
         {/* Header Bar: Only the "b" Logo Mark                                       */}
         {/* ========================================================================= */}
-        <header className="w-full h-[70px] lg:h-[84px] px-6 lg:px-[122px] flex items-center shrink-0">
+        <header className="w-full h-[60px] lg:h-[72px] px-6 lg:px-[122px] flex items-center shrink-0">
           <Link
             href="/"
             className="flex items-center focus:outline-none group transition-transform duration-200 active:scale-95"
@@ -64,9 +64,9 @@ export function AuthLayout({
         {/* ========================================================================= */}
         {/* Main 2-Column Content Layout (Left: Text, Right: Form Slot)               */}
         {/* ========================================================================= */}
-        <div className="relative w-full px-6 lg:px-0 flex flex-col lg:block mt-2 lg:mt-0">
+        <div className="relative w-full px-6 lg:px-0 flex flex-col lg:block mt-4 lg:mt-6">
           {/* Left Column Text (width: 475px, top: 0px, left: 122px) */}
-          <div className="lg:absolute lg:left-[122px] lg:top-[0px] w-full max-w-[475px] flex flex-col items-start gap-[14px] z-10">
+          <div className="lg:absolute lg:left-[122px] lg:top-[20px] w-full max-w-[475px] flex flex-col items-start gap-[14px] z-10">
             <h1 className="text-[20px] font-semibold text-[#F5F5F6] tracking-[-0.01em] leading-[120%] font-heading">
               {heading}
             </h1>

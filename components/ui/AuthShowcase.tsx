@@ -188,9 +188,10 @@ export function AuthShowcase() {
       {/* ========================================================================= */}
       {/* 2. White Squiggle 3D Shape (Flipped Horizontally)                         */}
       {/* Figma: width: 175px; left: calc(50% - 175px/2 - 162.5px) = 470px; top: 626px */}
+      {/* Floats above bottom-right of front card, under Happy Students card         */}
       {/* ========================================================================= */}
       <div
-        className="hidden lg:block absolute z-[12] w-[175px] h-[175px] pointer-events-none select-none"
+        className="hidden lg:block absolute z-[25] w-[175px] h-[175px] pointer-events-none select-none"
         style={{ left: "470px", top: "626px", transform: "matrix(-1, 0, 0, 1, 0, 0)" }}
       >
         <Image
@@ -207,10 +208,10 @@ export function AuthShowcase() {
       {/* ========================================================================= */}
       {/* 3. Lime Torus Ring 3D Shape                                               */}
       {/* Figma: width: 146px; left: calc(50% - 146px/2 - 496px) = 151px; top: 320px */}
-      {/* Overlaps top-left of back card, behind front card                        */}
+      {/* Floats above top-left of front card and back card                          */}
       {/* ========================================================================= */}
       <div
-        className="hidden lg:block absolute z-[15] w-[146px] h-[146px] pointer-events-none select-none"
+        className="hidden lg:block absolute z-[30] w-[146px] h-[146px] pointer-events-none select-none"
         style={{ left: "151px", top: "320px" }}
       >
         <Image

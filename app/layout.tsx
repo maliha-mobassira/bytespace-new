@@ -27,6 +27,18 @@ const satoshi = localFont({
   display: "swap",
 });
 
+const clashDisplay = localFont({
+  src: [
+    {
+      path: "./fonts/ClashDisplay-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-clash",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "ByteSpace - Get Access to Hundreds Courses Available",
   description: "Learn with expert tutors anywhere and anytime. Explore diverse learning paths at ByteSpace.",
@@ -38,7 +50,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${satoshi.variable} h-full`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${satoshi.variable} ${clashDisplay.variable} h-full`}
+    >
       <body className="min-h-full flex flex-col font-body antialiased">{children}</body>
     </html>
   );

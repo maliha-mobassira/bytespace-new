@@ -130,7 +130,7 @@ export function Testimonials() {
               key={item.id}
               className={`w-full max-w-[374px] md:w-[374px] ${item.cardHeightClass || "h-auto"} ${
                 item.offsetClass || ""
-              } bg-[#FFFFFF] rounded-[24px] p-[24px] flex flex-col items-start gap-[24px] shadow-[0px_4px_30px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-1`}
+              } bg-[#FFFFFF] rounded-[24px] p-[24px] flex flex-col items-start gap-[24px] shadow-[0px_4px_30px_rgba(0,0,0,0.04)]`}
               style={{
                 borderRadius: "24px",
               }}

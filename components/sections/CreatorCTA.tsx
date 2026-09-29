@@ -130,21 +130,21 @@ export function CreatorCTA() {
         </div>
 
         {/* 5. Top-Right Lime Cone / Pyramid */}
-        {/* Figma: width: 188px; left: calc(50% - 188px/2 + 454px) = 1080px; top: 0% = 0px */}
+        {/* Figma: sits at top-right, left side overlapping the text container border */}
         <div
-          className="absolute pointer-events-none"
+          className="absolute pointer-events-none z-10"
           style={{
-            left: "1080px",
-            top: "0px",
-            width: "188px",
-            height: "188px",
+            left: "1145px",
+            top: "15px",
+            width: "175px",
+            height: "175px",
           }}
         >
           <Image
             src="/images/cta/cta-cone-lime.png"
             alt=""
-            width={188}
-            height={188}
+            width={175}
+            height={175}
             priority
             unoptimized
             className="w-full h-full object-contain drop-shadow-xl"
@@ -152,21 +152,21 @@ export function CreatorCTA() {
         </div>
 
         {/* 6. Middle-Right White Cylinder */}
-        {/* Positioned on the right side matching Figma: visible tilted cylinder framing the right border */}
+        {/* Figma: tilted cylinder to the right of the cone, framing the right edge */}
         <div
-          className="absolute pointer-events-none"
+          className="absolute pointer-events-none z-10"
           style={{
-            left: "1160px",
-            top: "15px",
-            width: "280px",
-            height: "280px",
+            left: "1260px",
+            top: "35px",
+            width: "270px",
+            height: "270px",
           }}
         >
           <Image
             src="/images/cta/cta-cylinder-white.png"
             alt=""
-            width={280}
-            height={280}
+            width={270}
+            height={270}
             priority
             unoptimized
             className="w-full h-full object-contain drop-shadow-2xl grayscale brightness-105"
@@ -174,21 +174,21 @@ export function CreatorCTA() {
         </div>
 
         {/* 7. Bottom-Right Lime Squiggle */}
-        {/* Figma: width: 330px; left: calc(50% - 330px/2 + 555px) = 1110px; top: 59.22% = 289px */}
+        {/* Figma: compact horizontal squiggle under the cylinder, left loop tucked under text border */}
         <div
-          className="absolute pointer-events-none"
+          className="absolute pointer-events-none z-10"
           style={{
-            left: "1110px",
-            top: "289px",
-            width: "330px",
-            height: "330px",
+            left: "1130px",
+            top: "275px",
+            width: "210px",
+            height: "220px",
           }}
         >
           <Image
             src="/images/shape-squiggle-lime.png"
             alt=""
-            width={330}
-            height={330}
+            width={210}
+            height={220}
             priority
             unoptimized
             className="w-full h-full object-contain drop-shadow-xl"

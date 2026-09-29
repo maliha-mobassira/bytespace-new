@@ -5,6 +5,7 @@ import { ExploreCourses } from "@/components/sections/ExploreCourses";
 import { LearningPaths } from "@/components/sections/LearningPaths";
 import { ProfessionalGrowth } from "@/components/sections/ProfessionalGrowth";
 import { CTASection } from "@/components/sections/CTASection";
+import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
 
       {/* 7. Call To Action (CTA_Frame) */}
       <CTASection />
+
+      {/* 8. Testimonials (Testimonials_Frame) */}
+      <Testimonials />
     </div>
   );
 }

@@ -28,7 +28,8 @@ export function CourseCard({ course }: CourseCardProps) {
           src={course.image}
           alt={course.title}
           fill
-          sizes="(max-width: 768px) 100vw, 341px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 373px"
+          quality={95}
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
@@ -44,13 +45,15 @@ export function CourseCard({ course }: CourseCardProps) {
             {course.title}
           </h3>
 
-          <div className="flex items-center gap-1 text-[17px] text-[#4B4C53] font-normal shrink-0">
+          <div className="flex items-center gap-1 text-[17px] text-[#242528] font-semibold shrink-0">
             <span>{course.rating.toFixed(1)}</span>
             <svg
               width="17"
               height="17"
               viewBox="0 0 24 24"
-              fill="#B8BCC5"
+              fill="#D4FB20"
+              stroke="#242528"
+              strokeWidth="0.5"
               aria-hidden="true"
             >
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />

@@ -89,13 +89,22 @@ export function Discover() {
 
         {/* Tab_Categories */}
         <div className="w-full max-w-[1200px] flex flex-col items-center gap-[16px] mt-[48px] sm:mt-[56px]">
-          <div className="w-full flex items-center justify-center gap-[16px] overflow-x-auto pb-1 no-scrollbar">
+          <div
+            className="w-full flex items-center justify-start lg:justify-center gap-[12px] sm:gap-[16px] overflow-x-auto no-scrollbar py-1"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
             {CATEGORIES_ROW_1.map(renderPill)}
           </div>
-          <div className="w-full flex items-center justify-center gap-[16px] overflow-x-auto pb-1 no-scrollbar">
+          <div
+            className="w-full flex items-center justify-start lg:justify-center gap-[12px] sm:gap-[16px] overflow-x-auto no-scrollbar py-1"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
             {CATEGORIES_ROW_2.map(renderPill)}
           </div>
-          <div className="w-full flex items-center justify-center gap-[16px] overflow-x-auto pb-1 no-scrollbar">
+          <div
+            className="w-full flex items-center justify-start lg:justify-center gap-[12px] sm:gap-[16px] overflow-x-auto no-scrollbar py-1"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
             {CATEGORIES_ROW_3.map(renderPill)}
           </div>
         </div>

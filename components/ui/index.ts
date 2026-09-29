@@ -9,3 +9,4 @@ export * from "./CourseCard";
 export * from "./FloatingCard";
 export * from "./AvatarStack";
 export * from "./SearchBar";
+export * from "./AuthShowcase";

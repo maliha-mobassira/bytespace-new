@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 export interface AvatarStackProps {
   avatars?: string[];
   countBadge?: string;
+  badgeVariant?: "dark" | "lime";
   className?: string;
 }
 
@@ -21,6 +22,7 @@ const DEFAULT_AVATARS = [
 export function AvatarStack({
   avatars = DEFAULT_AVATARS,
   countBadge = "26+",
+  badgeVariant = "dark",
   className,
 }: AvatarStackProps) {
   return (
@@ -34,7 +36,14 @@ export function AvatarStack({
         </div>
       ))}
       {countBadge && (
-        <div className="relative w-[28px] h-[28px] rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[11px] font-bold flex items-center justify-center select-none shadow-xs shrink-0">
+        <div
+          className={cn(
+            "relative w-[28px] h-[28px] rounded-full border-2 border-white text-[11px] font-bold flex items-center justify-center select-none shadow-xs shrink-0",
+            badgeVariant === "lime"
+              ? "bg-[#D4FB20] text-[#242528]"
+              : "bg-[#242528] text-white"
+          )}
+        >
           {countBadge}
         </div>
       )}

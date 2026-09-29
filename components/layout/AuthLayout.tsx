@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { AuthShowcase } from "@/components/ui/AuthShowcase";
+
 export interface AuthLayoutProps {
   children: React.ReactNode;
   heading: string;
@@ -14,13 +16,13 @@ export interface AuthLayoutProps {
 /**
  * AuthLayout Component
  * Provides full-bleed Persian Blue background with 120px grid, minimalist "b" logo mark,
- * left promotional content with 3D showcase graphic, and right form slot.
+ * left promotional content with razor-sharp vector cards showcase, and right form slot.
  */
 export function AuthLayout({
   children,
   heading,
   description,
-  showcaseImage = "/images/register-showcase.png",
+  showcaseImage,
 }: AuthLayoutProps) {
   return (
     <main
@@ -69,18 +71,21 @@ export function AuthLayout({
             </p>
           </div>
 
-          {/* Left Column Graphic Showcase (top: 185px, left: 97px) */}
-          <div className="mt-8 lg:mt-0 lg:absolute lg:left-[97px] lg:top-[185px] w-full max-w-[548px] h-[400px] sm:h-[480px] lg:h-[585px] pointer-events-none select-none z-10">
-            <div className="relative w-full h-full">
-              <Image
-                src={showcaseImage}
-                alt="Showcase"
-                fill
-                priority
-                className="object-contain object-left-top"
-                sizes="(max-width: 1024px) 100vw, 548px"
-              />
-            </div>
+          {/* Left Column Graphic Showcase: Vector-Sharp Real Components & 2x Assets */}
+          <div className="mt-8 lg:mt-0 lg:absolute lg:left-[0px] lg:top-[0px] w-full lg:w-[680px] h-auto lg:h-[850px] z-10">
+            {showcaseImage && showcaseImage !== "/images/register-showcase.png" ? (
+              <div className="relative w-full h-[585px]">
+                <Image
+                  src={showcaseImage}
+                  alt="Showcase"
+                  fill
+                  priority
+                  className="object-contain object-left-top"
+                />
+              </div>
+            ) : (
+              <AuthShowcase />
+            )}
           </div>
 
           {/* Right Column Slot: Form Card */}

@@ -440,7 +440,10 @@ export function Hero() {
                 </svg>
               </div>
             </div>
-            <div className="flex flex-row items-center overflow-x-auto py-1 w-full">
+            <div
+              className="flex flex-row items-center overflow-hidden py-1 w-full no-scrollbar"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
               {studentAvatars.map((src, idx) => (
                 <div
                   key={idx}
